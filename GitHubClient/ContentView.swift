@@ -1,21 +1,17 @@
-//
-//  ContentView.swift
-//  GitHubClient
-//
-//  Created by 瀧澤 まりえ on 2024/05/28.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(alignment: .leading) {
+            HStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+            }
+            
+            Text("Good evening, world!!")
         }
-        .padding()
     }
 }
 
