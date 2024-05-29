@@ -2,21 +2,33 @@ import SwiftUI
 
 struct RepoListView: View {
     
-    private let mockRepos: [Repo] = [
-        .mock1, .mock2, .mock3, .mock4, .mock5
-    ]
+    @State private var mockRepos: [Repo] = []
     
     var body: some View {
         NavigationStack {
-            List(mockRepos) { repo in
-                NavigationLink(value: repo) {
-                    RepoRow(repo: repo)
+            if mockRepos.isEmpty {
+                ProgressView("loading")
+            } else {
+                List(mockRepos) { repo in
+                    NavigationLink(value: repo) {
+                        RepoRow(repo: repo)
+                    }
+                }
+                .navigationTitle("Repositories")
+                .navigationDestination(for: Repo.self) { repo in
+                    RepoDetailView(repo: repo)
                 }
             }
-            .navigationTitle("Repositories")
-            .navigationDestination(for: Repo.self) { repo in
-                RepoDetailView(repo: repo)
-            }
+        }
+        .onAppear {
+            loadRepos()
+        }
+    }
+    
+    private func loadRepos() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            mockRepos = [
+                .mock1, .mock2, .mock3, .mock4, .mock5, .mock1]
         }
     }
 }
