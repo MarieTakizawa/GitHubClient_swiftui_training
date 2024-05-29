@@ -2,14 +2,14 @@ import SwiftUI
 
 struct RepoListView: View {
     
-    @State private var mockRepos: [Repo] = []
+    @State private var store = ReposStore()
     
     var body: some View {
         NavigationStack {
-            if mockRepos.isEmpty {
+            if store.repos.isEmpty {
                 ProgressView("loading")
             } else {
-                List(mockRepos) { repo in
+                List(store.repos) { repo in
                     NavigationLink(value: repo) {
                         RepoRow(repo: repo)
                     }
@@ -20,16 +20,19 @@ struct RepoListView: View {
                 }
             }
         }
-        .onAppear {
-            loadRepos()
+        .task {
+            await store.loadRepos()
         }
     }
+}
+
+@Observable
+class ReposStore {
+    private(set) var repos = [Repo]()
     
-    private func loadRepos() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            mockRepos = [
-                .mock1, .mock2, .mock3, .mock4, .mock5, .mock1]
-        }
+    func loadRepos() async {
+        try! await Task.sleep(nanoseconds: 1_000_000_000)
+        repos = [.mock1, .mock2, .mock3, .mock4, .mock5, .mock1]
     }
 }
 
