@@ -28,11 +28,25 @@ struct RepoListView: View {
 
 @Observable
 class ReposStore {
+
     private(set) var repos = [Repo]()
     
     func loadRepos() async {
-        try! await Task.sleep(nanoseconds: 1_000_000_000)
-        repos = [.mock1, .mock2, .mock3, .mock4, .mock5, .mock1]
+        let url = URL(string: "https://api.github.com/orgs/mixigroup/repos")!
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = [
+            "Accept" : "application/vnd.github+json"
+        ]
+        
+        urlRequest.cachePolicy = .returnCacheDataElseLoad
+        
+        let (data, _) = try! await URLSession.shared.data(for: urlRequest)
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        repos = try! decoder.decode([Repo].self, from: data)
     }
 }
 
