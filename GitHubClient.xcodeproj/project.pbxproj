@@ -17,6 +17,7 @@
 		AA8122132C056CCF00707791 /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8122122C056CCF00707791 /* RepoDetailView.swift */; };
 		AA8122152C056D8E00707791 /* Repo+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8122142C056D8E00707791 /* Repo+mock.swift */; };
 		AA8122172C056E8600707791 /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8122162C056E8600707791 /* User+mock.swift */; };
+		AAD2BA3E2C0966C900AEB45F /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD2BA3D2C0966C900AEB45F /* Stateful.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		AA8122122C056CCF00707791 /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
 		AA8122142C056D8E00707791 /* Repo+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+mock.swift"; sourceTree = "<group>"; };
 		AA8122162C056E8600707791 /* User+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
+		AAD2BA3D2C0966C900AEB45F /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				AA0DDDD32C05642D006F39FD /* Repo.swift */,
 				AA0DDDD52C056440006F39FD /* User.swift */,
+				AAD2BA3D2C0966C900AEB45F /* Stateful.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				AA8122152C056D8E00707791 /* Repo+mock.swift in Sources */,
 				AA0DDDD62C056440006F39FD /* User.swift in Sources */,
 				AA0DDDD42C05642D006F39FD /* Repo.swift in Sources */,
+				AAD2BA3E2C0966C900AEB45F /* Stateful.swift in Sources */,
 				AA8122132C056CCF00707791 /* RepoDetailView.swift in Sources */,
 				AA0DDDC82C055ACF006F39FD /* RepoListView.swift in Sources */,
 				AA8122172C056E8600707791 /* User+mock.swift in Sources */,
