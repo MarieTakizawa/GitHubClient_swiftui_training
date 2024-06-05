@@ -19,6 +19,26 @@ final class ReposStoreTests: XCTestCase {
         }
     }
     
+    func test_異常系() async {
+        let store = ReposStore(
+            repoAPIClient: MockRepoAPIClient(
+                getRepos: {
+                    throw DummyError()
+                }
+            )
+        )
+        
+        await store.send(.onAppear)
+        
+        switch store.state {
+        case let .failed(error):
+            XCTAssert(error is DummyError)
+        default:
+            XCTFail()
+            
+        }
+    }
+    
     struct MockRepoAPIClient: RepoApiClientProtocol {
         var getRepos: () async throws -> [Repo]
         
@@ -26,5 +46,7 @@ final class ReposStoreTests: XCTestCase {
             try await getRepos()
         }
     }
+    
+    struct DummyError: Error {}
 
 }
