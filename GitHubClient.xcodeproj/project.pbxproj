@@ -19,8 +19,19 @@
 		AA8122172C056E8600707791 /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8122162C056E8600707791 /* User+mock.swift */; };
 		AA9DDADC2C10049200AEAB7B /* RepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DDADB2C10049200AEAB7B /* RepoStore.swift */; };
 		AA9DDADE2C1004C500AEAB7B /* RepoApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DDADD2C1004C500AEAB7B /* RepoApiClient.swift */; };
+		AA9DDAE62C100DC500AEAB7B /* ReposStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DDAE52C100DC500AEAB7B /* ReposStoreTests.swift */; };
 		AAD2BA3E2C0966C900AEB45F /* Stateful.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD2BA3D2C0966C900AEB45F /* Stateful.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA9DDAE72C100DC500AEAB7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0DDDBA2C055ACF006F39FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0DDDC12C055ACF006F39FD;
+			remoteInfo = GitHubClient;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AA0DDDC22C055ACF006F39FD /* GitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,11 +47,20 @@
 		AA8122162C056E8600707791 /* User+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
 		AA9DDADB2C10049200AEAB7B /* RepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStore.swift; sourceTree = "<group>"; };
 		AA9DDADD2C1004C500AEAB7B /* RepoApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoApiClient.swift; sourceTree = "<group>"; };
+		AA9DDAE32C100DC500AEAB7B /* ReposStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReposStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9DDAE52C100DC500AEAB7B /* ReposStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposStoreTests.swift; sourceTree = "<group>"; };
 		AAD2BA3D2C0966C900AEB45F /* Stateful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stateful.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA0DDDBF2C055ACF006F39FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA9DDAE02C100DC500AEAB7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0DDDC42C055ACF006F39FD /* GitHubClient */,
+				AA9DDAE42C100DC500AEAB7B /* ReposStoreTests */,
 				AA0DDDC32C055ACF006F39FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				AA0DDDC22C055ACF006F39FD /* GitHubClient.app */,
+				AA9DDAE32C100DC500AEAB7B /* ReposStoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +148,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		AA9DDAE42C100DC500AEAB7B /* ReposStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA9DDAE52C100DC500AEAB7B /* ReposStoreTests.swift */,
+			);
+			path = ReposStoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +176,24 @@
 			productReference = AA0DDDC22C055ACF006F39FD /* GitHubClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AA9DDAE22C100DC500AEAB7B /* ReposStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA9DDAEB2C100DC500AEAB7B /* Build configuration list for PBXNativeTarget "ReposStoreTests" */;
+			buildPhases = (
+				AA9DDADF2C100DC500AEAB7B /* Sources */,
+				AA9DDAE02C100DC500AEAB7B /* Frameworks */,
+				AA9DDAE12C100DC500AEAB7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA9DDAE82C100DC500AEAB7B /* PBXTargetDependency */,
+			);
+			name = ReposStoreTests;
+			productName = ReposStoreTests;
+			productReference = AA9DDAE32C100DC500AEAB7B /* ReposStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,6 +206,10 @@
 				TargetAttributes = {
 					AA0DDDC12C055ACF006F39FD = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					AA9DDAE22C100DC500AEAB7B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = AA0DDDC12C055ACF006F39FD;
 					};
 				};
 			};
@@ -175,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				AA0DDDC12C055ACF006F39FD /* GitHubClient */,
+				AA9DDAE22C100DC500AEAB7B /* ReposStoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +239,13 @@
 			files = (
 				AA0DDDCD2C055AD3006F39FD /* Preview Assets.xcassets in Resources */,
 				AA0DDDCA2C055AD3006F39FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA9DDAE12C100DC500AEAB7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +270,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA9DDADF2C100DC500AEAB7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9DDAE62C100DC500AEAB7B /* ReposStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA9DDAE82C100DC500AEAB7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0DDDC12C055ACF006F39FD /* GitHubClient */;
+			targetProxy = AA9DDAE72C100DC500AEAB7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AA0DDDCE2C055AD3006F39FD /* Debug */ = {
@@ -388,6 +464,48 @@
 			};
 			name = Release;
 		};
+		AA9DDAE92C100DC500AEAB7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tz.ReposStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHubClient";
+			};
+			name = Debug;
+		};
+		AA9DDAEA2C100DC500AEAB7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tz.ReposStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubClient.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHubClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,6 +523,15 @@
 			buildConfigurations = (
 				AA0DDDD12C055AD3006F39FD /* Debug */,
 				AA0DDDD22C055AD3006F39FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA9DDAEB2C100DC500AEAB7B /* Build configuration list for PBXNativeTarget "ReposStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA9DDAE92C100DC500AEAB7B /* Debug */,
+				AA9DDAEA2C100DC500AEAB7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

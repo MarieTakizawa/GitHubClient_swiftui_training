@@ -1,6 +1,10 @@
 import Foundation
 
-struct RepoAPIClient {
+protocol RepoApiClientProtocol {
+    func getRepos() async throws -> [Repo]
+}
+
+struct RepoAPIClient: RepoApiClientProtocol {
     func getRepos() async throws -> [Repo] {
         let url = URL(string: "https://api.github.com/orgs/mixigroup/repos")!
 
