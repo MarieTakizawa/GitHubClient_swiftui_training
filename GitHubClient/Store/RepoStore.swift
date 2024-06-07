@@ -10,7 +10,7 @@ final class ReposStore {
     
     private let repoAPIClient: RepoApiClientProtocol
 
-    init(repoAPIClient: RepoApiClientProtocol = RepoAPIClient()) {
+    init(repoAPIClient: RepoApiClientProtocol) {
         self.repoAPIClient = repoAPIClient
     }
 

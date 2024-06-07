@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @State var store = ReposStore()
+    @State var store: ReposStore
     var body: some View {
         NavigationStack {
             Group {
@@ -43,5 +43,11 @@ struct RepoListView: View {
 }
 
 #Preview {
-    RepoListView()
+    RepoListView(
+        store: ReposStore(
+            repoAPIClient: MockRepoAPIClient(
+                getRepos: { [.mock1, .mock2, .mock5] }
+            )
+        )
+    )
 }

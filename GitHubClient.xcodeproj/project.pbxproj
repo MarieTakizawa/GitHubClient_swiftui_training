@@ -17,6 +17,8 @@
 		AA8122132C056CCF00707791 /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8122122C056CCF00707791 /* RepoDetailView.swift */; };
 		AA8122152C056D8E00707791 /* Repo+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8122142C056D8E00707791 /* Repo+mock.swift */; };
 		AA8122172C056E8600707791 /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8122162C056E8600707791 /* User+mock.swift */; };
+		AA89B5C12C12B601009B0FF9 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA89B5C02C12B601009B0FF9 /* DummyError.swift */; };
+		AA89B5C32C12B62E009B0FF9 /* MockRepoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA89B5C22C12B62E009B0FF9 /* MockRepoAPIClient.swift */; };
 		AA9DDADC2C10049200AEAB7B /* RepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DDADB2C10049200AEAB7B /* RepoStore.swift */; };
 		AA9DDADE2C1004C500AEAB7B /* RepoApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DDADD2C1004C500AEAB7B /* RepoApiClient.swift */; };
 		AA9DDAE62C100DC500AEAB7B /* ReposStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DDAE52C100DC500AEAB7B /* ReposStoreTests.swift */; };
@@ -45,6 +47,8 @@
 		AA8122122C056CCF00707791 /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
 		AA8122142C056D8E00707791 /* Repo+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repo+mock.swift"; sourceTree = "<group>"; };
 		AA8122162C056E8600707791 /* User+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
+		AA89B5C02C12B601009B0FF9 /* DummyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyError.swift; sourceTree = "<group>"; };
+		AA89B5C22C12B62E009B0FF9 /* MockRepoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoAPIClient.swift; sourceTree = "<group>"; };
 		AA9DDADB2C10049200AEAB7B /* RepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStore.swift; sourceTree = "<group>"; };
 		AA9DDADD2C1004C500AEAB7B /* RepoApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoApiClient.swift; sourceTree = "<group>"; };
 		AA9DDAE32C100DC500AEAB7B /* ReposStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReposStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,8 @@
 				AA0DDDCC2C055AD3006F39FD /* Preview Assets.xcassets */,
 				AA8122142C056D8E00707791 /* Repo+mock.swift */,
 				AA8122162C056E8600707791 /* User+mock.swift */,
+				AA89B5C02C12B601009B0FF9 /* DummyError.swift */,
+				AA89B5C22C12B62E009B0FF9 /* MockRepoAPIClient.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -257,11 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0DDDD92C0568C9006F39FD /* RepoRow.swift in Sources */,
+				AA89B5C12C12B601009B0FF9 /* DummyError.swift in Sources */,
 				AA9DDADC2C10049200AEAB7B /* RepoStore.swift in Sources */,
 				AA8122152C056D8E00707791 /* Repo+mock.swift in Sources */,
 				AA0DDDD62C056440006F39FD /* User.swift in Sources */,
 				AA0DDDD42C05642D006F39FD /* Repo.swift in Sources */,
 				AAD2BA3E2C0966C900AEB45F /* Stateful.swift in Sources */,
+				AA89B5C32C12B62E009B0FF9 /* MockRepoAPIClient.swift in Sources */,
 				AA8122132C056CCF00707791 /* RepoDetailView.swift in Sources */,
 				AA0DDDC82C055ACF006F39FD /* RepoListView.swift in Sources */,
 				AA8122172C056E8600707791 /* User+mock.swift in Sources */,
