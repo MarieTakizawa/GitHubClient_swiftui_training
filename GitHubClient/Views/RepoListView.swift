@@ -57,8 +57,9 @@ struct RepoListView: View {
         store: ReposStore(
             repoAPIClient: MockRepoAPIClient(
                 getRepos: {
-                    try await Task.sleep(for: .seconds(5))
-                    return [.mock1, .mock2, .mock5]
+                    while true {
+                        try await Task.sleep(until: .now + .seconds(1))
+                    }
                 }
             )
         )
