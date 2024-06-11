@@ -42,11 +42,34 @@ struct RepoListView: View {
     }
 }
 
-#Preview {
+#Preview("Default") {
     RepoListView(
         store: ReposStore(
             repoAPIClient: MockRepoAPIClient(
                 getRepos: { [.mock1, .mock2, .mock5] }
+            )
+        )
+    )
+}
+
+#Preview("Loading") {
+    RepoListView(
+        store: ReposStore(
+            repoAPIClient: MockRepoAPIClient(
+                getRepos: {
+                    try await Task.sleep(for: .seconds(5))
+                    return [.mock1, .mock2, .mock5]
+                }
+            )
+        )
+    )
+}
+
+#Preview("Error") {
+    RepoListView(
+        store: ReposStore(
+            repoAPIClient: MockRepoAPIClient(
+                getRepos: { throw DummyError() }
             )
         )
     )
