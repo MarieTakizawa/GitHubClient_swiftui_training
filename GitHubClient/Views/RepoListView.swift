@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct RepoListView: View {
+    @State var count = 0
+    @State var isShownSheetView = false
+
     @State var store: ReposStore
     var body: some View {
         NavigationStack {
@@ -39,6 +42,38 @@ struct RepoListView: View {
         .task {
             await store.send(.onAppear)
         }
+
+        VStack {
+            HStack {
+                Button("-") {
+                    count -= 1
+                }
+                Text("Counter: \(count)")
+                Button("+") {
+                    count += 1
+                }
+            }
+            .padding()
+
+            Button("show sheetView") {
+                isShownSheetView = true
+            }
+        }
+        .padding()
+        .font(.title)
+        .sheet(isPresented: $isShownSheetView, content: {
+            sheetView(sheetCount: $count)
+        })
+    }
+}
+
+struct sheetView: View {
+    @Binding var sheetCount: Int
+    var body: some View {
+        Button("+10") {
+            sheetCount += 10
+        }
+        .font(.title)
     }
 }
 
